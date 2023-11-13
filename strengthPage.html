@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strength page</title>
+    <link rel="stylesheet" href="strengthPage.css">
+    <script src="https://kit.fontawesome.com/28bc975a71.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+    <div class="heading">
+        <div class="home-page-contecter">
+            <img src="images/Woman with phone and shopping bag.png">
+            <nav>
+                <ul>
+                    <li> <a href="homePage.html">HOME</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1 class="heading-text"> <span>My</span> Strength</h1>
+
+
+
+        <div class="tab-titles">
+            <h1 class="tab-links active-link" onclick="opentab('ui/ux design')">UI/UX Design</h1>
+            <h1 class="tab-links" onclick="opentab('data structure and algorithm')">Data Structure and <br>Algorithm</h1>
+            <h1 class="tab-links" onclick="opentab('websites design')">Websites <br>Design</h1>
+        </div>
+        
+        <div class="tab-contents active-tab" id="ui/ux design">
+            <ul>
+                <li>-Can design <br> Websites using <br> Figma <br> Prototype</li>
+                
+            </ul>
+        </div>
+        <div class="tab-contents" id="data structure and algorithm"> 
+            <ul>
+                <li>-Problem Solving <br> skills <br>-Can opt for <br> efficient Solution</li>
+            </ul>
+
+        </div>
+        <div class="tab-contents" id="websites design">
+            <ul>
+                <li>-Can design <br> Websites using <br> HTML and CSS</li>
+            </ul>
+
+        </div>
+        
+     </div> 
+    </div>
+<script>
+     var tablinks = document.getElementsByClassName("tab-links");
+     var tabcontents = document.getElementsByClassName("tab-contents");
+     function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+     }
+</script>
+</body>
+</html>

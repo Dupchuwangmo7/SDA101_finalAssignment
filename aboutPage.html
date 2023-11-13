@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <link rel="stylesheet" href="aboutPage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            
+            <div class="image-container">
+                <img src="images/me.png" >
+
+            </div>
+            <div class="about-col-2">
+                <h1 class="heading">About <span>Me</span></h1>
+                <h1 class="sub-title-1">Software Engineer <br> UI/UX designer </h1>
+                <p class="sub-title-2">I’m Currently pursuing BE in Software
+                 <br>Engineering in Bhutan.</p>
+
+
+                 <div class="tab-titles">
+                    <h1 class="tab-links active-link" onclick="opentab('hobbies')"> Hobbies</h1>
+                    <h1 class="tab-links" onclick="opentab('language')"> Language</h1>
+                 </div>
+                 <div class="tab-contents active-tab" id="hobbies">
+                    <ul>
+                        <li> <span> <h1> Hobbies</h1></span> <br>-Coding <br>-Designing <br>-Reading</li>
+                        
+                    </ul>
+                 </div>
+                 <div class="tab-contents" id="language">
+                    <ul>
+                        <li> <span> <h1>Language</h1></span> <br>-PYTHON3 <br>-HTML <br>-CSS</li>
+                        
+                    </ul>
+                 </div>
+                 <div class="main-content">
+                    <p>Throughout my school journey, I have consistently been recognized as a passionate <br>learner. My unwavering dedication and hard work have paved the way for me to embark <br>on a career as a software engineer. I am determined to become a well-known software <br>engineer in the near future.</p>
+                    <p class="main-content-2">In addition to majoring in Software Engineering, I am eager to pursue Cybersecurity as <br>my second major starting next year. Furthermore, I am committed to enhancing my <br> design and problem-solving skills. I am enthusiastic about the prospect of collaborating <br> on a diverse array of projects during my upcoming college years.</p>
+                </div>
+    
+            </div>
+         <div>
+            <div class="home-page-contecter">
+                <img src="images/Woman with phone and shopping bag.png">
+                <nav>
+                    <ul>
+                        <li><a href="homePage.html">HOME</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+      </div>      
+
+        
+    </div>
+    
+<script>
+     var tablinks = document.getElementsByClassName("tab-links");
+     var tabcontents = document.getElementsByClassName("tab-contents");
+     function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+     }
+     
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>
